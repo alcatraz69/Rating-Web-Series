@@ -5,16 +5,21 @@ import { useState } from "react";
 const seriesDB = {
   Thriller: [
     { name: "Breaking Bad", rating: "5/5" },
-    { name: "Money Heist", rating: "4/5" }
+    { name: "Money Heist", rating: "4/5" },
+    { name: "Walking Dead", rating: "3.5/5" }
   ],
 
   fiction: [
     {
       name: "Dark",
-      rating: "4.5/5"
+      rating: "5/5"
     },
     {
       name: "The Boys",
+      rating: "4.5/5"
+    },
+    {
+      name: "Stranger Things",
       rating: "4.5/5"
     }
   ],
@@ -22,6 +27,10 @@ const seriesDB = {
     {
       name: "Friends",
       rating: "5/5"
+    },
+    {
+      name: "Riverdale",
+      rating: "4/5"
     },
     {
       name: "This is us",
@@ -38,9 +47,8 @@ export default function App() {
   return (
     <div className="App">
       <h1> 📺 Best Web Series </h1>
-      <p style={{ fontSize: "smaller" }}>
-        {" "}
-        Checkout my favorite Web Series. Select a genre to get started{" "}
+      <p style={{ fontSize: "medium" }}>
+        choose a genre and I'll give you my recommendations!
       </p>
 
       <div>
@@ -49,35 +57,36 @@ export default function App() {
             onClick={() => genreClickHandler(genre)}
             style={{
               cursor: "pointer",
-              background: "#E5E7EB",
-              borderRadius: "0.5rem",
+              background: "green",
+              borderRadius: "1rem",
               padding: "0.5rem  1rem",
-              border: "1px solid black",
-              margin: "1rem 0.3rem"
+              border: "1px solid white",
+              margin: "1rem 0.4rem",
+              color: "white"
             }}
+            key={genre}
           >
             {genre}
           </button>
         ))}
       </div>
-      <hr />
+      <hr style={{ border: "4px solid blue", borderRadius: "10px" }} />
       <div style={{ textAlign: "left" }}>
         <ul style={{ paddingInlineStart: "0" }}>
-          {seriesDB[selectedGenre].map((book) => (
+          {seriesDB[selectedGenre].map((series) => (
             <li
-              key={book.name}
+              key={series.name}
               style={{
                 listStyle: "none",
                 padding: "1rem",
-                border: "1px solid #D1D5DB",
+                border: "2px solid green",
                 width: "70%",
-                margin: "1rem 0rem",
+                margin: "1rem auto",
                 borderRadius: "0.5rem"
               }}
             >
-              {" "}
-              <div style={{ fontSize: "larger" }}> {book.name} </div>
-              <div style={{ fontSize: "smaller" }}> {book.rating} </div>
+              <div style={{ fontSize: "larger" }}> {series.name} </div>
+              <div style={{ fontSize: "smaller" }}> {series.rating} </div>
             </li>
           ))}
         </ul>
