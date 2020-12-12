@@ -4,28 +4,28 @@ import { useState } from "react";
 
 const seriesDB = {
   Thriller: [
-    { name: "Eloquent JavaScript", rating: "4/5" },
-    { name: "You Don't Know JS", rating: "3.5/5" }
+    { name: "Breaking Bad", rating: "5/5" },
+    { name: "Money Heist", rating: "4/5" }
   ],
 
   fiction: [
     {
-      name: "Shiva Trilogy",
-      rating: "5/5"
+      name: "Dark",
+      rating: "4.5/5"
     },
     {
-      name: "Harry Potter and the Sorcerer's Stone",
+      name: "The Boys",
       rating: "4.5/5"
     }
   ],
   Romance: [
     {
-      name: "Never Split the Difference",
-      rating: "3.5/5"
+      name: "Friends",
+      rating: "5/5"
     },
     {
-      name: "Loonshots",
-      rating: "5/5"
+      name: "This is us",
+      rating: "4/5"
     }
   ]
 };
