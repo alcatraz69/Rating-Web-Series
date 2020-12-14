@@ -46,7 +46,7 @@ export default function App() {
   }
   return (
     <div className="App">
-      <h1> 📺 Best Web Series </h1>
+      <h1> Best Web Series</h1>
       <p style={{ fontSize: "medium" }}>
         choose a genre and I'll give you my recommendations!
       </p>
